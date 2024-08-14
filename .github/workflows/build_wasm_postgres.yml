@@ -7,6 +7,7 @@ permissions:
 
 on:
   workflow_call:
+  workflow_dispatch:
 
 jobs:
   build:
@@ -19,7 +20,7 @@ jobs:
       SDKROOT: /opt/python-wasm-sdk
       SYS_PYTHON: /usr/bin/python3
       PGROOT: /tmp/pglite
-      DEBUG: false
+      DEBUG: true
       OBJDUMP: true
 
     steps:
