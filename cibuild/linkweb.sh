@@ -186,8 +186,9 @@ _________________________________________________________
 
     emcc $EMCC_WEB $LINKER $MODULE  \
      -sTOTAL_MEMORY=256MB -sSTACK_SIZE=4MB -sGLOBAL_BASE=${CMA_MB}MB \
+     -g3 \
      -fPIC -D__PYDK__=1 -DPREFIX=${PGROOT} \
-     -sALLOW_TABLE_GROWTH -sALLOW_MEMORY_GROWTH -sERROR_ON_UNDEFINED_SYMBOLS -sASSERTIONS=0 \
+     -sALLOW_TABLE_GROWTH -sALLOW_MEMORY_GROWTH -sERROR_ON_UNDEFINED_SYMBOLS -sASSERTIONS=1 \
      -lnodefs.js -lidbfs.js \
      -sEXPORTED_RUNTIME_METHODS=FS,setValue,getValue,UTF8ToString,stringToNewUTF8,stringToUTF8OnStack,ccall,cwrap,callMain \
      --preload-file ${PGROOT}/share/postgresql@${PGROOT}/share/postgresql \

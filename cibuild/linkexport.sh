@@ -2,7 +2,8 @@ echo "============= link export : begin ==============="
 emcc $EMCC_WEB -fPIC -sMAIN_MODULE=1 -O0 \
  -D__PYDK__=1 -DPREFIX=${PGROOT} \
  -sTOTAL_MEMORY=256MB -sSTACK_SIZE=4MB -sALLOW_TABLE_GROWTH -sALLOW_MEMORY_GROWTH -sGLOBAL_BASE=${CMA_MB}MB \
- -sERROR_ON_UNDEFINED_SYMBOLS -sASSERTIONS=0 \
+ -sERROR_ON_UNDEFINED_SYMBOLS -sASSERTIONS=1 \
+ -g3 \
  -lnodefs.js -lidbfs.js \
  -sEXPORTED_RUNTIME_METHODS=FS,setValue,getValue,UTF8ToString,stringToNewUTF8,stringToUTF8OnStack,ccall,cwrap,callMain \
  --preload-file ${PGROOT}/share/postgresql@${PGROOT}/share/postgresql \
