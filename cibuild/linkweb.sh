@@ -93,10 +93,10 @@ pushd src/backend
     then
         # es6
         MODULE="-g3 -O0 -sMODULARIZE=1 -sEXPORT_ES6=1 -sEXPORT_NAME=Module" #OK
-        MODULE="-g0 -Os -sMODULARIZE=1 -sEXPORT_ES6=1 -sEXPORT_NAME=Module" # no plpgsql 7.2M
-        MODULE="-g0 -O2 -sMODULARIZE=1 -sEXPORT_ES6=1 -sEXPORT_NAME=Module" #OK 7.4M
+        MODULE="-g3 -Os -sMODULARIZE=1 -sEXPORT_ES6=1 -sEXPORT_NAME=Module" # no plpgsql 7.2M
+        MODULE="-g3 -O2 -sMODULARIZE=1 -sEXPORT_ES6=1 -sEXPORT_NAME=Module" #OK 7.4M
         #MODULE="-g0 -O3 -sMODULARIZE=1 -sEXPORT_ES6=1 -sEXPORT_NAME=Module" # NO
-        MODULE="-g0 -O2 --closure 0 -sMODULARIZE=1 -sEXPORT_ES6=1 -sEXPORT_NAME=Module" # NO
+        MODULE="-g3 -O2 --closure 0 -sMODULARIZE=1 -sEXPORT_ES6=1 -sEXPORT_NAME=Module" # NO
     else
         # local debug fast build
         MODULE="-g3 -O0 -sMODULARIZE=0 -sEXPORT_ES6=0"
