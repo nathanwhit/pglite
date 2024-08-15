@@ -50,8 +50,9 @@ fi
 # default to web/release size optim.
 if $DEBUG
 then
-    echo "debug not supported on web build"
-    exit 51
+    export PGDEBUG=""
+    export CDEBUG="-g3 -O0 -sASSERTIONS"
+    export EMCC_DEBUG=1
 else
     export PGDEBUG=""
     export CDEBUG="-g0 -Os"
