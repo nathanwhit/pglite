@@ -1,0 +1,8 @@
+# @electric-sql/pglite-react
+
+## 0.2.1
+
+### Patch Changes
+
+- e0d205c: Add utility for generating typed provider and hook.
+- af9e064: Fix exports in package.json
